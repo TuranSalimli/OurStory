@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-plum font-body;
+  background-image: radial-gradient(circle at 15% 10%, rgba(243, 201, 198, 0.35), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(169, 183, 156, 0.25), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(203, 164, 107, 0.15), transparent 50%);
+}
+
+::selection {
+  background: #C5788A;
+  color: #FBF3EE;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF3EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #E3A8A6;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5788A;
+}
+
+.leaflet-container {
+  font-family: 'Outfit', sans-serif;
+  border-radius: 1.5rem;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem !important;
+  background: #FBF3EE !important;
+}
+
+.leaflet-popup-tip {
+  background: #FBF3EE !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
